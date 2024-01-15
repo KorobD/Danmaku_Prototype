@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8762236845410919995}
   - component: {fileID: 8288344987554506244}
   - component: {fileID: 6190594872484260594}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyDefaultProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f573315b9c0fa044995c5120a023b7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletLife: 1
   rotation: 0
   speed: 1
 --- !u!1 &7792615869905419885
@@ -94,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1655999025612290911}
   - component: {fileID: 7836323641346591275}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

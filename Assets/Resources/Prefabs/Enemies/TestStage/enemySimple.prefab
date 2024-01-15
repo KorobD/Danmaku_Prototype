@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4136111639121350457}
   - component: {fileID: 6800397506172981812}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201715249049871817}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b8a7fa0d1dd8ab4f976f287cc31b6bd, type: 3}
   m_Name: 
@@ -47,8 +47,6 @@ MonoBehaviour:
   bullet: {fileID: 3916505030854601352, guid: e10d342be4b0fa144b919f31e10b536d, type: 3}
   speed: 5
   speenSpeed: 1
-  spawnerType: 0
-  fireTipe: 0
   firingRate: 0.1
 --- !u!1 &2419576086945902091
 GameObject:
@@ -60,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1320180886381061300}
   - component: {fileID: 3459421312142889459}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +143,8 @@ GameObject:
   - component: {fileID: 6752223527041235243}
   - component: {fileID: 5102365411950339531}
   - component: {fileID: 1026490593581662807}
-  m_Layer: 0
+  - component: {fileID: 834354378918818006}
+  m_Layer: 13
   m_Name: enemySimple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,3 +193,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
+--- !u!58 &834354378918818006
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7241963350964426004}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.15

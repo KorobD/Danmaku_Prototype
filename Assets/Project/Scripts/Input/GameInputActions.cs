@@ -55,9 +55,9 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""UltShoot"",
+                    ""name"": ""Pause"",
                     ""type"": ""Button"",
-                    ""id"": ""d017734a-c891-48fa-8ae3-a44ab27c3acc"",
+                    ""id"": ""b70dcf45-d792-4c45-8269-e2c24fc69063"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -144,12 +144,12 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""82c18c77-03da-4d81-826c-47c43d11543b"",
-                    ""path"": ""<Keyboard>/x"",
+                    ""id"": ""fa749772-85f2-4768-a7aa-0d12dc98af77"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""UltShoot"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -186,7 +186,7 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
         m_Player_SlowMove = m_Player.FindAction("SlowMove", throwIfNotFound: true);
-        m_Player_UltShoot = m_Player.FindAction("UltShoot", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -251,7 +251,7 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Shoot;
     private readonly InputAction m_Player_SlowMove;
-    private readonly InputAction m_Player_UltShoot;
+    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @GameInputActions m_Wrapper;
@@ -259,7 +259,7 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
         public InputAction @SlowMove => m_Wrapper.m_Player_SlowMove;
-        public InputAction @UltShoot => m_Wrapper.m_Player_UltShoot;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -278,9 +278,9 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
             @SlowMove.started += instance.OnSlowMove;
             @SlowMove.performed += instance.OnSlowMove;
             @SlowMove.canceled += instance.OnSlowMove;
-            @UltShoot.started += instance.OnUltShoot;
-            @UltShoot.performed += instance.OnUltShoot;
-            @UltShoot.canceled += instance.OnUltShoot;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -294,9 +294,9 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
             @SlowMove.started -= instance.OnSlowMove;
             @SlowMove.performed -= instance.OnSlowMove;
             @SlowMove.canceled -= instance.OnSlowMove;
-            @UltShoot.started -= instance.OnUltShoot;
-            @UltShoot.performed -= instance.OnUltShoot;
-            @UltShoot.canceled -= instance.OnUltShoot;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -337,6 +337,6 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnSlowMove(InputAction.CallbackContext context);
-        void OnUltShoot(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

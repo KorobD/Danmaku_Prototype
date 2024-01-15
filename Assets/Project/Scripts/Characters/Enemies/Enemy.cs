@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -5,31 +6,31 @@ public class Enemy : MonoBehaviour, IEnemy {
 
 
 
-    private int healthPoints;
-
-    public int HealthPoint {
-        set {
-            if (0 < value) {
-                healthPoints = value;
-            } else {
-                Debug.Log("Invalid value: \"healtPoint\", the value will be set to default: 5");
-                healthPoints = 5;
-            }
-        }
-    }
-
+    [SerializeField] private int healthPoints = 10;
+    [SerializeField] private int damage = 2;
+    public static Action OnEnemyDestroy;
 
     private void Start() {
 
     }
 
-   
+    private void Update() {
+        if (healthPoints <= 0) {
+            Destroy(gameObject);
+            OnEnemyDestroy?.Invoke();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        
+        IPlayerProjectile p = collision.gameObject.GetComponent<IPlayerProjectile>();
+        if (p != null) {
+            TakeDamage(damage);
+        }
+    }
+
     public void TakeDamage(int damage) {
         healthPoints -= damage;
     }
 
-    public void GiveBonus(string bonus) {
-
-    }
-    
 }

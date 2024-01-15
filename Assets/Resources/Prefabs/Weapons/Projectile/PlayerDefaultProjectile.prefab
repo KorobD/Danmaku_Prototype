@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -9200230134855922684}
   - component: {fileID: 8288344987554506244}
   - component: {fileID: 5888656554629171966}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PlayerDefaultProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -119,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1655999025612290911}
   - component: {fileID: 7836323641346591275}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

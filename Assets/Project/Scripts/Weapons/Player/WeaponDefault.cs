@@ -34,6 +34,7 @@ public class WeaponDefault : MonoBehaviour {
             nextFire = Time.time + fireRate;
             var projectile = Instantiate(prefabProjectaile, defaultFirePoint.position, defaultFirePoint.rotation);
             projectile.GetComponent<Rigidbody2D>().velocity = defaultFirePoint.up * projectileSpeed;
+            GameAudio.Instance.PlaySFX("PewPew");
         }
     }
 

@@ -33,9 +33,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "UltShoot",
+                    "name": "Pause",
                     "type": "Button",
-                    "id": "d017734a-c891-48fa-8ae3-a44ab27c3acc",
+                    "id": "b70dcf45-d792-4c45-8269-e2c24fc69063",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -122,12 +122,12 @@
                 },
                 {
                     "name": "",
-                    "id": "82c18c77-03da-4d81-826c-47c43d11543b",
-                    "path": "<Keyboard>/x",
+                    "id": "fa749772-85f2-4768-a7aa-0d12dc98af77",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "UltShoot",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

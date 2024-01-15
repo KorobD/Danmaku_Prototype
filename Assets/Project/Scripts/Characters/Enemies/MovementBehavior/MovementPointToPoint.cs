@@ -22,7 +22,6 @@ public class MovementPointToPoint : IMovementBehavior {
     }
 
     public Vector3 Move(Vector3 currentPosition, List<Vector3> waypoints, float speedMove) {
-        Debug.Log($"Waypoint Index: {waypointIndex}, Time Remaining: {timeRemaining}");
         if (waypointIndex < waypoints.Count) {
 
             Vector3 targetPoint = waypoints[waypointIndex];
