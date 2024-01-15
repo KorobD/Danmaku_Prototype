@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class TestBulletSpawner : MonoBehaviour {
@@ -11,7 +8,7 @@ public class TestBulletSpawner : MonoBehaviour {
     public GameObject bullet;
     public float speed = 5f;
     public float speenSpeed = 1f;
-    private int numberOfBullets = 4;
+
 
     //public SpawnerType spawnerType;
     //public FireType fireTipe;

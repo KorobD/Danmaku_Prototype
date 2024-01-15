@@ -7,8 +7,8 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void ExitPressed() {
-        UnityEditor.EditorApplication.isPlaying = false;
-        //Application.Quit();
+        //UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 
     private void Awake() {
