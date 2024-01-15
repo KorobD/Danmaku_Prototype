@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestBullet : MonoBehaviour {
+public class TestBullet : MonoBehaviour, IEnemyProjectile {
 
     public float rotation = 0f;
     public float speed = 1f;

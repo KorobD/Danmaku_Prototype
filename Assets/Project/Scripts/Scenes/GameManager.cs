@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
@@ -22,6 +20,7 @@ public class GameManager : MonoBehaviour {
         Instance = this;
         GameInput.Instance.OnPauseAction += GameInput_OnpauseAction;
         SpawnerTestStage.Instance.OnEndSpawn += SpawnerTestStage_OnEndSpawn;
+        Player.OnPlayerDestroy += SpawnerTestStage_OnEndSpawn;
     }
 
     private void SpawnerTestStage_OnEndSpawn() {
@@ -37,7 +36,7 @@ public class GameManager : MonoBehaviour {
         GameInput.Instance.OnPauseAction -= GameInput_OnpauseAction;
     }
 
-    private void TogglePauseGame() {
+    public void TogglePauseGame() {
         isGamePause = !isGamePause;
         if (isGamePause) {
             Time.timeScale = 0f;

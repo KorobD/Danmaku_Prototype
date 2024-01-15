@@ -1,10 +1,7 @@
 using System;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Enemy : MonoBehaviour, IEnemy {
-
-
 
     [SerializeField] private int healthPoints = 10;
     [SerializeField] private int damage = 2;

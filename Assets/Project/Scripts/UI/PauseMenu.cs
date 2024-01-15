@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,8 +27,8 @@ public class PauseMenu : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
-    private void ContinuePressed() {
-    
+    public void ContinuePressed() {
+        GameManager.Instance.TogglePauseGame();
     }
 
     public void MainMenuPressed() {
